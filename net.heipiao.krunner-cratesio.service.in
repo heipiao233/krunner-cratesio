@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=net.heipiao.krunner-cratesio
+Exec=@BINPATH@
