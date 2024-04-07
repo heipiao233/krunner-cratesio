@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=KRunner Crates.io
-Comment=Rust runner test
+Comment=A plugin for krunner that allows you search crates.io
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=cratesio
