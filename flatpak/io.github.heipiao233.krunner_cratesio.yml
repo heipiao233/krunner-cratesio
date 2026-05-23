@@ -16,7 +16,7 @@ modules:
     build-commands:
       # - cargo --offline fetch --manifest-path Cargo.toml --verbose
       - cargo install --root ${FLATPAK_DEST} --path . --no-track
-      - install -Dm0644 flatpak/io.github.heipiao233.krunner_cratesio.xml -t ${FLATPAK_DEST}/share/metainfo/
+      - install -Dm0644 flatpak/io.github.heipiao233.krunner_cratesio.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo/
       - install -Dm0644 icons/cratesio.png -t ${FLATPAK_DEST}/share/icons/hicolor/22x22/apps/
       - install -Dm0644 icons/docsrs.png -t ${FLATPAK_DEST}/share/icons/hicolor/22x22/apps/
       - install -Dm0644 icons/librs.png -t ${FLATPAK_DEST}/share/icons/hicolor/22x22/apps/
