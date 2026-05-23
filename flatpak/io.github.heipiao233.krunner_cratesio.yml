@@ -21,6 +21,7 @@ modules:
       - install -Dm0644 icons/docsrs.png -t ${FLATPAK_DEST}/share/icons/hicolor/22x22/apps/
       - install -Dm0644 icons/librs.png -t ${FLATPAK_DEST}/share/icons/hicolor/22x22/apps/
       - install -Dm0644 krunner-cratesio.desktop -t ${FLATPAK_DEST}/share/krunner/dbusplugins/
+      - install -d ${FLATPAK_DEST}/share/dbus-1/services/
       - sed "s|@BINPATH@|/app/bin/krunner-cratesio|" io.github.heipiao233.krunner_cratesio.service.in > ${FLATPAK_DEST}/share/dbus-1/services/io.github.heipiao233.krunner_cratesio.service
     sources:
         - type: git
