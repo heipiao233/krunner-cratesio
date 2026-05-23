@@ -11,5 +11,5 @@ X-KDE-PluginInfo-Version=0.1.0
 X-KDE-PluginInfo-License=MIT
 X-KDE-PluginInfo-EnabledByDefault=true
 X-Plasma-API=DBus
-X-Plasma-DBusRunner-Service=net.heipiao.krunner-cratesio
+X-Plasma-DBusRunner-Service=io.github.heipiao233.krunner_cratesio
 X-Plasma-DBusRunner-Path=/CrateRunner

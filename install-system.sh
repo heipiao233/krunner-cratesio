@@ -10,6 +10,6 @@ sudo cp target/release/krunner-cratesio /usr/bin
 
 sudo cp icons/* /usr/share/icons/hicolor/22x22/apps/
 sudo cp krunner-cratesio.desktop /usr/share/krunner/dbusplugins/
-sed "s|@BINPATH@|$(which krunner-cratesio)|" net.heipiao.krunner-cratesio.service.in | sudo tee /usr/share/dbus-1/services/net.heipiao.krunner-cratesio.service > /dev/null
+sed "s|@BINPATH@|$(which krunner-cratesio)|" io.github.heipiao233.krunner_cratesio.service.in | sudo tee /usr/share/dbus-1/services/io.github.heipiao233.krunner_cratesio.service > /dev/null
 
 kquitapp6 krunner

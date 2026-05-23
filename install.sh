@@ -9,6 +9,6 @@ cargo install --path .
 
 cp icons/* ~/.local/share/icons/hicolor/22x22/apps/
 cp krunner-cratesio.desktop ~/.local/share/krunner/dbusplugins/
-sed "s|@BINPATH@|$(which krunner-cratesio)|" net.heipiao.krunner-cratesio.service.in > ~/.local/share/dbus-1/services/net.heipiao.krunner-cratesio.service
+sed "s|@BINPATH@|$(which krunner-cratesio)|" io.github.heipiao233.krunner_cratesio.service.in > ~/.local/share/dbus-1/services/io.github.heipiao233.krunner_cratesio.service
 
 kquitapp6 krunner

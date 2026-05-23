@@ -110,6 +110,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut handle = Easy::new();
     handle.useragent("krunner-cratesio 0.1.0 (mailto:heipiao233@outlook.com)")?;
     let registry = Registry::new_handle(String::from("https://crates.io"), None, handle, false);
-    Runner(registry).start("net.heipiao.krunner-cratesio", "/CrateRunner")?;
+    Runner(registry).start("io.github.heipiao233.krunner_cratesio", "/CrateRunner")?;
     Ok(())
 }
