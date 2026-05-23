@@ -1,0 +1,31 @@
+id: io.github.heipiao233.krunner_cratesio
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+build-options:
+  append-path: /usr/lib/sdk/rust-stable/bin
+command: krunner-cratesio
+modules:
+  - name: krunner-cratesio
+    buildsystem: simple
+    build-options:
+      build-args:
+        - --share=network
+    build-commands:
+      # - cargo --offline fetch --manifest-path Cargo.toml --verbose
+      - cargo install --root ${FLATPAK_DEST} --path . --no-track
+      - install -Dm0644 flatpak/io.github.heipiao233.krunner_cratesio.xml -t ${FLATPAK_DEST}/share/metainfo/
+      - install -Dm0644 icons/cratesio.png -t ${FLATPAK_DEST}/share/icons/hicolor/22x22/apps/
+      - install -Dm0644 icons/docsrs.png -t ${FLATPAK_DEST}/share/icons/hicolor/22x22/apps/
+      - install -Dm0644 icons/librs.png -t ${FLATPAK_DEST}/share/icons/hicolor/22x22/apps/
+      - install -Dm0644 krunner-cratesio.desktop -t ${FLATPAK_DEST}/share/krunner/dbusplugins/
+      - sed "s|@BINPATH@|/app/bin/krunner-cratesio|" io.github.heipiao233.krunner_cratesio.service.in > ${FLATPAK_DEST}/share/dbus-1/services/io.github.heipiao233.krunner_cratesio.service
+    sources:
+        - type: git
+          url: https://github.com/heipiao233/krunner-cratesio.git
+        # - cargo-sources.json
+finish-args:
+  # Needs to talk to the network:
+  - --share=network
